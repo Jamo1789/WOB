@@ -1,16 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<Header_Wob />
+<PostComponent msg="Welcome to look Macro dataz App"/>
+<Visualization_Wob />
+<footer_Wob />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PostComponent from './components/PostComponent.vue'
+import Header_Wob from './components/Header_Wob.vue'
+import footer_Wob from './components/Footer_Wob.vue'
+import Visualization_Wob from './components/Visualization_Wob.vue'
+
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    PostComponent,
+    Header_Wob,
+    Visualization_Wob,
+    footer_Wob,
+}
 }
 </script>
 
@@ -21,6 +31,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  
 }
 </style>

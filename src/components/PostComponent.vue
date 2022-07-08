@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h3>Hola</h3>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -31,11 +31,34 @@
 </template>
 
 <script>
+import PostService from '../PostService.js'
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+  name: 'PostComponent',
+  data(){
+    return{
+      array_check: [],
+    }
+  },
+   async mounted() {
+      try{
+/*
+sso[0].latestmonth.map(i=> Number(i))
+        this.sso = await PostService.getPosts();
+        this.series[0].data = await PostService.getPosts()["0"].latestmonth;
+        this.series[0].data = await PostService.getPosts()
+        this.sso.latestmonth.map(i=> Number(i))
+*/
+        
+        this.array_check = await PostService.getPosts()
+        //this.series[0].data.push(...this.sso[0].latestmonth.map(i=> Number(i)))
+      }
+      
+      catch(err){
+        this.error.err.message
+
+      }
+    },
+
 }
 </script>
 
